@@ -16,7 +16,7 @@ Shortly after realeasing the app my harddrive crashed and I lost all my code. Ye
 I used .Net reflector and got back my code, but since there was a lot going on in my life, I never released a proper version.
 Anyhow, here is the code for anywant who wants it.
 
-## Licence
+## License
 This program is free software; you can redistribute it and/or modify it under the terms of the [GNU General Public License](LICENSE.txt "GNU General Public License") as published by the Free Software Foundation; version 3 of the License.
 
 ### Links
