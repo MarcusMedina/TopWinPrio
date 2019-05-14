@@ -4,15 +4,14 @@ using System.Windows.Forms;
 
 namespace TopWinPrio
 {
-
-    internal abstract sealed class Program
+    internal sealed class Program
     {
 
         [STAThread]
         public static void Main()
         {
             bool flag = true;
-            using (Mutex mutex = new Mutex(true, "LunaWorX TopWinPrio", flag))
+            using (Mutex mutex = new Mutex(true, "LunaWorX TopWinPrio", out flag))
             {
                 if (flag)
                 {

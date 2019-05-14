@@ -9,20 +9,16 @@ using TopWinPrio.Properties;
 
 namespace TopWinPrio
 {
-
     public class frmPrio : Form
     {
-
         private class ProcessData
         {
-
             public ProcessPriorityClass lastPrio;
             public int processID;
 
             public ProcessData()
             {
             }
-
         } // class ProcessData
 
         private string assemblyLocation;
@@ -222,13 +218,10 @@ namespace TopWinPrio
             checkBox9 = new CheckBox();
             tabControl1.SuspendLayout();
             tabPrio.SuspendLayout();
-            pictureBox1.BeginInit();
             tabSettings.SuspendLayout();
             groupBox1.SuspendLayout();
-            pictureBox2.BeginInit();
             tabPage1.SuspendLayout();
             groupBox2.SuspendLayout();
-            pictureBox3.BeginInit();
             SuspendLayout();
             timerTopWindowCheck.Enabled = true;
             timerTopWindowCheck.Interval = 1000;
@@ -596,23 +589,19 @@ namespace TopWinPrio
             tabControl1.ResumeLayout(false);
             tabPrio.ResumeLayout(false);
             tabPrio.PerformLayout();
-            pictureBox1.EndInit();
             tabSettings.ResumeLayout(false);
             tabSettings.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            pictureBox2.EndInit();
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            pictureBox3.EndInit();
             ResumeLayout(false);
         }
 
         private bool SetProcessPrio(frmPrio.ProcessData theProc, ProcessPriorityClass processPriorityClass)
         {
-            bool flag2;
             Process process;
 
             bool flag1 = false;
@@ -723,8 +712,6 @@ namespace TopWinPrio
                 components.Dispose();
             base.Dispose(disposing);
         }
-
     } // class frmPrio
-
 }
 
