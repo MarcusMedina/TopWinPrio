@@ -11,6 +11,9 @@ StyleCop was not happy with me when I opened the code 2019.
 
 My plan is to make a more Windows 10 adapted version, but for now I'll just publish this version.
 
+## Download
+You can download the [original Zip](http://marcusmedina.pro/freeware/TopWinPrio.zip "original Zip") with manual and installer from my Website.
+
 ## History
 Shortly after realeasing the app my harddrive crashed and I lost all my code. Yes I know, I should have stored it in the cloud, but I didn't.
 I used .Net reflector and got back my code, but since there was a lot going on in my life, I never released a proper version.
