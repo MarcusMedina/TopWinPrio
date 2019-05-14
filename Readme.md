@@ -17,7 +17,7 @@ I used .Net reflector and got back my code, but since there was a lot going on i
 Anyhow, here is the code for anywant who wants it.
 
 ## Licence
-This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; version 3 of the License.
+This program is free software; you can redistribute it and/or modify it under the terms of the [GNU General Public License](LICENSE.txt "GNU General Public License") as published by the Free Software Foundation; version 3 of the License.
 
 ### Links
 Here are some links of people who appreciated my app.
