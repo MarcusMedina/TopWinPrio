@@ -18,8 +18,11 @@
 #pragma warning disable SA1120 // Comments should contain text
 #pragma warning disable SA1515 // Single-line comment should be preceded by blank line
 #pragma warning disable SA1629 // Documentation text should end with a period
+#pragma warning disable SA1413 // Use trailing comma in multi-line initializers
+#pragma warning disable SA1500 // Braces for multi-line statements should not share line
 
 #pragma warning disable ET002
+
 namespace TopWinPrio
 {
     using System;
@@ -32,7 +35,7 @@ namespace TopWinPrio
     using TopWinPrio.Properties;
 
     /// <summary>
-    /// Defines the <see cref="MainForm" />
+    /// Defines the <see cref="MainForm"/>
     /// </summary>
     public class MainForm : Form
     {
@@ -47,14 +50,64 @@ namespace TopWinPrio
         private readonly string keyName;
 
         /// <summary>
-        /// Defines the closeButton
+        /// Defines the activeLabel
         /// </summary>
-        private Button closeButton;
+        private Label activeLabel;
 
         /// <summary>
-        /// Defines the exitButton
+        /// Defines the activeList
         /// </summary>
-        private Button exitButton;
+        private ComboBox activeList;
+
+        /// <summary>
+        /// Defines the allTabs
+        /// </summary>
+        private TabControl allTabs;
+
+        /// <summary>
+        /// Defines the applicationFrame
+        /// </summary>
+        private GroupBox applicationFrame;
+
+        /// <summary>
+        /// Defines the applicationInfo
+        /// </summary>
+        private Label applicationInfo;
+
+        /// <summary>
+        /// Defines the applicationPriorityLabel
+        /// </summary>
+        private Label applicationPriorityLabel;
+
+        /// <summary>
+        /// Defines the applicationPriorityList
+        /// </summary>
+        private ComboBox applicationPriorityList;
+
+        /// <summary>
+        /// Defines the applicationSettings
+        /// </summary>
+        private TabPage applicationSettings;
+
+        /// <summary>
+        /// Defines the autostartOption
+        /// </summary>
+        private CheckBox autostartOption;
+
+        /// <summary>
+        /// Defines the boostExplorerOption
+        /// </summary>
+        private CheckBox boostExplorerOption;
+
+        /// <summary>
+        /// Defines the boostFrame
+        /// </summary>
+        private GroupBox boostFrame;
+
+        /// <summary>
+        /// Defines the boostSettings
+        /// </summary>
+        private TabPage boostSettings;
 
         /// <summary>
         /// Defines the checkBox5
@@ -82,31 +135,6 @@ namespace TopWinPrio
         private CheckBox checkBox9;
 
         /// <summary>
-        /// Defines the autostartOption
-        /// </summary>
-        private CheckBox autostartOption;
-
-        /// <summary>
-        /// Defines the boostExplorerOption
-        /// </summary>
-        private CheckBox boostExplorerOption;
-
-        /// <summary>
-        /// Defines the startBalloonOption
-        /// </summary>
-        private CheckBox startBalloonOption;
-
-        /// <summary>
-        /// Defines the showPopupOption
-        /// </summary>
-        private CheckBox showPopupOption;
-
-        /// <summary>
-        /// Defines the startHiddenOption
-        /// </summary>
-        private CheckBox startHiddenOption;
-
-        /// <summary>
         /// Defines the clmTime
         /// </summary>
         private ColumnHeader clmTime;
@@ -117,19 +145,9 @@ namespace TopWinPrio
         private ColumnHeader clmWindow;
 
         /// <summary>
-        /// Defines the applicationPriorityList
+        /// Defines the closeButton
         /// </summary>
-        private ComboBox applicationPriorityList;
-
-        /// <summary>
-        /// Defines the inactiveList
-        /// </summary>
-        private ComboBox inactiveList;
-
-        /// <summary>
-        /// Defines the activeList
-        /// </summary>
-        private ComboBox activeList;
+        private Button closeButton;
 
         /// <summary>
         /// Defines the comboBox1
@@ -147,19 +165,9 @@ namespace TopWinPrio
         private IContainer components;
 
         /// <summary>
-        /// Defines the boostFrame
+        /// Defines the exitButton
         /// </summary>
-        private GroupBox boostFrame;
-
-        /// <summary>
-        /// Defines the applicationFrame
-        /// </summary>
-        private GroupBox applicationFrame;
-
-        /// <summary>
-        /// Defines the timerSlider
-        /// </summary>
-        private HScrollBar timerSlider;
+        private Button exitButton;
 
         /// <summary>
         /// Defines the hScrollBar1
@@ -167,9 +175,14 @@ namespace TopWinPrio
         private HScrollBar hScrollBar1;
 
         /// <summary>
-        /// Defines the isFirstRun
+        /// Defines the inactiveLabel
         /// </summary>
-        private bool isFirstRun;
+        private Label inactiveLabel;
+
+        /// <summary>
+        /// Defines the inactiveList
+        /// </summary>
+        private ComboBox inactiveList;
 
         /// <summary>
         /// Defines the infoLabel
@@ -177,19 +190,9 @@ namespace TopWinPrio
         private Label infoLabel;
 
         /// <summary>
-        /// Defines the settingsInfoText
+        /// Defines the isFirstRun
         /// </summary>
-        private Label settingsInfoText;
-
-        /// <summary>
-        /// Defines the activeLabel
-        /// </summary>
-        private Label activeLabel;
-
-        /// <summary>
-        /// Defines the inactiveLabel
-        /// </summary>
-        private Label inactiveLabel;
+        private bool isFirstRun;
 
         /// <summary>
         /// Defines the label5
@@ -207,24 +210,9 @@ namespace TopWinPrio
         private Label label7;
 
         /// <summary>
-        /// Defines the applicationInfo
-        /// </summary>
-        private Label applicationInfo;
-
-        /// <summary>
-        /// Defines the applicationPriorityLabel
-        /// </summary>
-        private Label applicationPriorityLabel;
-
-        /// <summary>
         /// Defines the lastHandle
         /// </summary>
         private int lastHandle;
-
-        /// <summary>
-        /// Defines the refreshLabel
-        /// </summary>
-        private Label refreshLabel;
 
         /// <summary>
         /// Defines the logList
@@ -232,34 +220,14 @@ namespace TopWinPrio
         private ListView logList;
 
         /// <summary>
-        /// Defines the oldProc
-        /// </summary>
-        private MainForm.ProcessData oldProc;
-
-        /// <summary>
         /// Defines the logoPic
         /// </summary>
         private PictureBox logoPic;
 
         /// <summary>
-        /// Defines the toolsPic
+        /// Defines the oldProc
         /// </summary>
-        private PictureBox toolsPic;
-
-        /// <summary>
-        /// Defines the settingsPic
-        /// </summary>
-        private PictureBox settingsPic;
-
-        /// <summary>
-        /// Defines the allTabs
-        /// </summary>
-        private TabControl allTabs;
-
-        /// <summary>
-        /// Defines the applicationSettings
-        /// </summary>
-        private TabPage applicationSettings;
+        private MainForm.ProcessData oldProc;
 
         /// <summary>
         /// Defines the prioList
@@ -267,14 +235,49 @@ namespace TopWinPrio
         private TabPage prioList;
 
         /// <summary>
-        /// Defines the boostSettings
+        /// Defines the refreshLabel
         /// </summary>
-        private TabPage boostSettings;
+        private Label refreshLabel;
+
+        /// <summary>
+        /// Defines the settingsInfoText
+        /// </summary>
+        private Label settingsInfoText;
+
+        /// <summary>
+        /// Defines the settingsPic
+        /// </summary>
+        private PictureBox settingsPic;
+
+        /// <summary>
+        /// Defines the showPopupOption
+        /// </summary>
+        private CheckBox showPopupOption;
+
+        /// <summary>
+        /// Defines the startBalloonOption
+        /// </summary>
+        private CheckBox startBalloonOption;
+
+        /// <summary>
+        /// Defines the startHiddenOption
+        /// </summary>
+        private CheckBox startHiddenOption;
+
+        /// <summary>
+        /// Defines the timerSlider
+        /// </summary>
+        private HScrollBar timerSlider;
 
         /// <summary>
         /// Defines the timerTopWindowCheck
         /// </summary>
         private Timer timerTopWindowCheck;
+
+        /// <summary>
+        /// Defines the toolsPic
+        /// </summary>
+        private PictureBox toolsPic;
 
         /// <summary>
         /// Defines the trayIcon
@@ -296,7 +299,7 @@ namespace TopWinPrio
         /// <summary>
         /// The Dispose
         /// </summary>
-        /// <param name="disposing">The disposing<see cref="bool"/></param>
+        /// <param name="disposing">The disposing <see cref="bool"/></param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -308,10 +311,51 @@ namespace TopWinPrio
         }
 
         /// <summary>
+        /// The SetProcessPrio
+        /// </summary>
+        /// <param name="theProc">The theProc <see cref="MainForm.ProcessData"/></param>
+        /// <param name="processPriorityClass">The processPriorityClass <see cref="ProcessPriorityClass"/></param>
+        /// <returns>The <see cref="bool"/></returns>
+        private static bool SetProcessPrio(MainForm.ProcessData theProc, ProcessPriorityClass processPriorityClass)
+        {
+            Process process;
+
+            var flag1 = false;
+            try
+            {
+                process = Process.GetProcessById(theProc.ProcessID);
+            }
+#pragma warning disable CA1031 // Do not catch general exception types
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return false;
+            }
+#pragma warning restore CA1031 // Do not catch general exception types
+            if (process == null)
+            {
+                return false;
+            }
+
+            try
+            {
+                process.PriorityClass = processPriorityClass;
+                flag1 = true;
+            }
+#pragma warning disable CA1031 // Do not catch general exception types
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+#pragma warning restore CA1031 // Do not catch general exception types
+            return flag1;
+        }
+
+        /// <summary>
         /// The BtnClose_Click
         /// </summary>
-        /// <param name="sender">The sender<see cref="object"/></param>
-        /// <param name="e">The e<see cref="EventArgs"/></param>
+        /// <param name="sender">The sender <see cref="object"/></param>
+        /// <param name="e">The e <see cref="EventArgs"/></param>
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Visible = false;
@@ -324,31 +368,31 @@ namespace TopWinPrio
         /// <summary>
         /// The BtnExit_Click
         /// </summary>
-        /// <param name="sender">The sender<see cref="object"/></param>
-        /// <param name="e">The e<see cref="EventArgs"/></param>
+        /// <param name="sender">The sender <see cref="object"/></param>
+        /// <param name="e">The e <see cref="EventArgs"/></param>
         private void BtnExit_Click(object sender, EventArgs e) => Application.Exit();
 
         /// <summary>
         /// The ChkAutostart_CheckedChanged
         /// </summary>
-        /// <param name="sender">The sender<see cref="object"/></param>
-        /// <param name="e">The e<see cref="EventArgs"/></param>
+        /// <param name="sender">The sender <see cref="object"/></param>
+        /// <param name="e">The e <see cref="EventArgs"/></param>
         private void ChkAutostart_CheckedChanged(object sender, EventArgs e)
         {
-            if (Util.IsAutoStartEnabled(keyName, assemblyLocation))
+            if (RegistryTools.IsAutoStartEnabled(keyName, assemblyLocation))
             {
-                Util.UnSetAutoStart(keyName);
+                RegistryTools.RemoveAutoStart(keyName);
                 return;
             }
 
-            Util.SetAutoStart(keyName, assemblyLocation);
+            RegistryTools.SetAutoStart(keyName, assemblyLocation);
         }
 
         /// <summary>
         /// The FrmPrio_Activated
         /// </summary>
-        /// <param name="sender">The sender<see cref="object"/></param>
-        /// <param name="e">The e<see cref="EventArgs"/></param>
+        /// <param name="sender">The sender <see cref="object"/></param>
+        /// <param name="e">The e <see cref="EventArgs"/></param>
         private void FrmPrio_Activated(object sender, EventArgs e)
         {
             if (isFirstRun)
@@ -378,8 +422,8 @@ namespace TopWinPrio
         /// <summary>
         /// The FrmPrio_FormClosed
         /// </summary>
-        /// <param name="sender">The sender<see cref="object"/></param>
-        /// <param name="e">The e<see cref="FormClosedEventArgs"/></param>
+        /// <param name="sender">The sender <see cref="object"/></param>
+        /// <param name="e">The e <see cref="FormClosedEventArgs"/></param>
         private void FrmPrio_FormClosed(object sender, FormClosedEventArgs e)
         {
             Settings.Default.BoostExplorer = boostExplorerOption.Checked;
@@ -397,8 +441,8 @@ namespace TopWinPrio
         /// <summary>
         /// The FrmPrio_Load
         /// </summary>
-        /// <param name="sender">The sender<see cref="object"/></param>
-        /// <param name="e">The e<see cref="EventArgs"/></param>
+        /// <param name="sender">The sender <see cref="object"/></param>
+        /// <param name="e">The e <see cref="EventArgs"/></param>
         private void FrmPrio_Load(object sender, EventArgs e)
         {
             boostExplorerOption.Checked = Settings.Default.BoostExplorer;
@@ -409,19 +453,19 @@ namespace TopWinPrio
             startBalloonOption.Checked = Settings.Default.BalloonStart;
             showPopupOption.Checked = Settings.Default.BalloonHidden;
             applicationPriorityList.SelectedIndex = Settings.Default.ApplicationPrio;
-            autostartOption.Checked = Util.IsAutoStartEnabled(keyName, assemblyLocation);
+            autostartOption.Checked = RegistryTools.IsAutoStartEnabled(keyName, assemblyLocation);
             HsbTimer_Scroll(null, null);
         }
 
         /// <summary>
         /// The HsbTimer_Scroll
         /// </summary>
-        /// <param name="sender">The sender<see cref="object"/></param>
-        /// <param name="e">The e<see cref="ScrollEventArgs"/></param>
+        /// <param name="sender">The sender <see cref="object"/></param>
+        /// <param name="e">The e <see cref="ScrollEventArgs"/></param>
         private void HsbTimer_Scroll(object sender, ScrollEventArgs e)
         {
             var i = timerSlider.Value;
-            refreshLabel.Text = "Refresh every " + i.ToString() + " secs";
+            refreshLabel.Text = "Refresh every " + i.ToString(System.Globalization.CultureInfo.CurrentCulture) + " secs";
             timerTopWindowCheck.Interval = i * 1000;
         }
 
@@ -540,7 +584,9 @@ namespace TopWinPrio
             // 
             // logList
             // 
-            this.logList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { this.clmTime, this.clmWindow, });
+            this.logList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmTime,
+            this.clmWindow});
             this.logList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.logList.Location = new System.Drawing.Point(3, 80);
             this.logList.Name = "logList";
@@ -612,7 +658,11 @@ namespace TopWinPrio
             this.inactiveList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.inactiveList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inactiveList.FormattingEnabled = true;
-            this.inactiveList.Items.AddRange(new object[] { "Default", "Normal", "BelowNormal", "Idle (not a good idea)", });
+            this.inactiveList.Items.AddRange(new object[] {
+            "Default",
+            "Normal",
+            "BelowNormal",
+            "Idle (not a good idea)"});
             this.inactiveList.Location = new System.Drawing.Point(134, 95);
             this.inactiveList.Name = "inactiveList";
             this.inactiveList.Size = new System.Drawing.Size(143, 21);
@@ -633,7 +683,10 @@ namespace TopWinPrio
             this.activeList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.activeList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.activeList.FormattingEnabled = true;
-            this.activeList.Items.AddRange(new object[] { "AboveNormal", "High", "RealTime (dangerous)", });
+            this.activeList.Items.AddRange(new object[] {
+            "AboveNormal",
+            "High",
+            "RealTime (dangerous)"});
             this.activeList.Location = new System.Drawing.Point(134, 68);
             this.activeList.Name = "activeList";
             this.activeList.Size = new System.Drawing.Size(143, 21);
@@ -733,7 +786,9 @@ namespace TopWinPrio
             this.applicationPriorityList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.applicationPriorityList.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicationPriorityList.FormattingEnabled = true;
-            this.applicationPriorityList.Items.AddRange(new object[] { "Normal", "BelowNormal", });
+            this.applicationPriorityList.Items.AddRange(new object[] {
+            "Normal",
+            "BelowNormal"});
             this.applicationPriorityList.Location = new System.Drawing.Point(136, 109);
             this.applicationPriorityList.Name = "applicationPriorityList";
             this.applicationPriorityList.Size = new System.Drawing.Size(143, 21);
@@ -870,7 +925,11 @@ namespace TopWinPrio
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] { "Default", "Normal", "BelowNormal", "Idle (not a good idea)", });
+            this.comboBox1.Items.AddRange(new object[] {
+            "Default",
+            "Normal",
+            "BelowNormal",
+            "Idle (not a good idea)"});
             this.comboBox1.Location = new System.Drawing.Point(134, 95);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(143, 21);
@@ -891,7 +950,10 @@ namespace TopWinPrio
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] { "AboveNormal", "High", "RealTime (dangerous)", });
+            this.comboBox2.Items.AddRange(new object[] {
+            "AboveNormal",
+            "High",
+            "RealTime (dangerous)"});
             this.comboBox2.Location = new System.Drawing.Point(134, 68);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(143, 21);
@@ -972,51 +1034,10 @@ namespace TopWinPrio
         }
 
         /// <summary>
-        /// The SetProcessPrio
-        /// </summary>
-        /// <param name="theProc">The theProc<see cref="MainForm.ProcessData"/></param>
-        /// <param name="processPriorityClass">The processPriorityClass<see cref="ProcessPriorityClass"/></param>
-        /// <returns>The <see cref="bool"/></returns>
-        private bool SetProcessPrio(MainForm.ProcessData theProc, ProcessPriorityClass processPriorityClass)
-        {
-            Process process;
-
-            var flag1 = false;
-            try
-            {
-                process = Process.GetProcessById(theProc.ProcessID);
-            }
-#pragma warning disable CA1031 // Do not catch general exception types
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-                return false;
-            }
-#pragma warning restore CA1031 // Do not catch general exception types
-            if (process == null)
-            {
-                return false;
-            }
-
-            try
-            {
-                process.PriorityClass = processPriorityClass;
-                flag1 = true;
-            }
-#pragma warning disable CA1031 // Do not catch general exception types
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-            }
-#pragma warning restore CA1031 // Do not catch general exception types
-            return flag1;
-        }
-
-        /// <summary>
         /// The TimerTopWindowCheck_Tick
         /// </summary>
-        /// <param name="sender">The sender<see cref="object"/></param>
-        /// <param name="e">The e<see cref="EventArgs"/></param>
+        /// <param name="sender">The sender <see cref="object"/></param>
+        /// <param name="e">The e <see cref="EventArgs"/></param>
         private void TimerTopWindowCheck_Tick(object sender, EventArgs e)
         {
             timerTopWindowCheck.Enabled = false;
@@ -1059,7 +1080,7 @@ namespace TopWinPrio
                         Debug.WriteLine(ex.Message);
                     }
 
-                    if (processData1 != null)
+                    // if (processData1 != null) // Testing to see if the If is necessary.
                     {
                         if (inactiveList.Text != "Default")
                         {
@@ -1096,8 +1117,8 @@ namespace TopWinPrio
         /// <summary>
         /// The TrayIcon_BalloonTipClicked
         /// </summary>
-        /// <param name="sender">The sender<see cref="object"/></param>
-        /// <param name="e">The e<see cref="EventArgs"/></param>
+        /// <param name="sender">The sender <see cref="object"/></param>
+        /// <param name="e">The e <see cref="EventArgs"/></param>
         private void TrayIcon_BalloonTipClicked(object sender, EventArgs e)
         {
             Visible = false;
@@ -1107,8 +1128,8 @@ namespace TopWinPrio
         /// <summary>
         /// The TrayIcon_MouseClick
         /// </summary>
-        /// <param name="sender">The sender<see cref="object"/></param>
-        /// <param name="e">The e<see cref="MouseEventArgs"/></param>
+        /// <param name="sender">The sender <see cref="object"/></param>
+        /// <param name="e">The e <see cref="MouseEventArgs"/></param>
         private void TrayIcon_MouseClick(object sender, MouseEventArgs e)
         {
             Visible = !Visible;
@@ -1122,13 +1143,12 @@ namespace TopWinPrio
         }
 
         /// <summary>
-        /// Defines the <see cref="ProcessData" />.
+        /// Defines the <see cref="ProcessData"/>.
         /// </summary>
         private class ProcessData
         {
             /// <summary>
-            /// Gets or sets the LastPrio
-            /// Gets or sets LastPrio.
+            /// Gets or sets the LastPrio Gets or sets LastPrio.
             /// </summary>
             public ProcessPriorityClass LastPrio { get; set; }
 
@@ -1139,6 +1159,7 @@ namespace TopWinPrio
         }
     }
 }
+
 #pragma warning restore CA1031 // Do not catch general exception types
 #pragma warning restore IDE0003 // Remove qualification
 #pragma warning restore IDE0007 // Use implicit type
@@ -1151,3 +1172,5 @@ namespace TopWinPrio
 #pragma warning restore SA1120 // Comments should contain text
 #pragma warning restore SA1515 // Single-line comment should be preceded by blank line
 #pragma warning restore SA1629 // Documentation text should end with a period
+#pragma warning restore SA1413 // Use trailing comma in multi-line initializers
+#pragma warning restore SA1500 // Braces for multi-line statements should not share line

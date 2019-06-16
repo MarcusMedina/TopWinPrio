@@ -7,6 +7,8 @@
 // For more information visit http://MarcusMedina.Pro
 //----------------------------------------------------------------------------------------------------------------
 
+#pragma warning disable ET002
+
 namespace TopWinPrio.Properties
 {
     using System;
@@ -19,7 +21,7 @@ namespace TopWinPrio.Properties
     using System.Runtime.CompilerServices;
 
     /// <summary>
-    /// Defines the <see cref="Resources" />
+    /// Defines the <see cref="Resources"/>
     /// </summary>
     [DebuggerNonUserCode]
     [CompilerGenerated]

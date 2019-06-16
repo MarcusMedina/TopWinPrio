@@ -8,6 +8,7 @@
 //----------------------------------------------------------------------------------------------------------------
 
 #pragma warning disable ET002
+
 namespace TopWinPrio.Properties
 {
     using System.CodeDom.Compiler;
@@ -17,7 +18,7 @@ namespace TopWinPrio.Properties
     using System.Runtime.CompilerServices;
 
     /// <summary>
-    /// Defines the <see cref="Settings" />
+    /// Defines the <see cref="Settings"/>
     /// </summary>
     [GeneratedCode("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "9.0.0.0")]
     [CompilerGenerated]
@@ -201,8 +202,8 @@ namespace TopWinPrio.Properties
         /// <summary>
         /// The SettingChangingEventHandler
         /// </summary>
-        /// <param name="sender">The sender<see cref="object"/></param>
-        /// <param name="e">The e<see cref="SettingChangingEventArgs"/></param>
+        /// <param name="sender">The sender <see cref="object"/></param>
+        /// <param name="e">The e <see cref="SettingChangingEventArgs"/></param>
         private void SettingChangingEventHandler(object sender, SettingChangingEventArgs e)
         {
         }
@@ -210,8 +211,8 @@ namespace TopWinPrio.Properties
         /// <summary>
         /// The SettingsSavingEventHandler
         /// </summary>
-        /// <param name="sender">The sender<see cref="object"/></param>
-        /// <param name="e">The e<see cref="CancelEventArgs"/></param>
+        /// <param name="sender">The sender <see cref="object"/></param>
+        /// <param name="e">The e <see cref="CancelEventArgs"/></param>
         private void SettingsSavingEventHandler(object sender, CancelEventArgs e)
         {
         }

@@ -9,6 +9,7 @@
 
 using System.Diagnostics;
 using System.Reflection;
+using System.Resources;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -37,3 +38,4 @@ using System.Runtime.InteropServices;
 [assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
 [assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]
 [assembly: ComVisible(false)]
+[assembly: NeutralResourcesLanguage("en")]

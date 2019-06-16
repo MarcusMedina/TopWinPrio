@@ -8,6 +8,7 @@
 //----------------------------------------------------------------------------------------------------------------
 
 #pragma warning disable ET002
+
 namespace TopWinPrio
 {
     using System;
@@ -15,14 +16,14 @@ namespace TopWinPrio
     using System.Text;
 
     /// <summary>
-    /// Defines the <see cref="NativeMethods" />.
+    /// Defines the <see cref="NativeMethods"/>.
     /// </summary>
-    internal class NativeMethods
+    internal static class NativeMethods
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="NativeMethods"/> class.
+        /// Initializes static members of the <see cref="NativeMethods"/> class.
         /// </summary>
-        public NativeMethods()
+        static NativeMethods()
         {
         }
 
@@ -38,7 +39,7 @@ namespace TopWinPrio
         {
             get
             {
-                GetWindowThreadProcessId(GetForegroundWindow(), out var ui);
+                _ = GetWindowThreadProcessId(GetForegroundWindow(), out var ui);
                 return (int)ui;
             }
         }
@@ -67,6 +68,7 @@ namespace TopWinPrio
         /// The GetForegroundWindow.
         /// </summary>
         /// <returns>The <see cref="IntPtr"/>.</returns>
+        [System.Security.SecurityCritical]
         [PreserveSig]
         [DllImport("user32.dll", CallingConvention = CallingConvention.Winapi, CharSet = CharSet.Unicode)]
         private static extern IntPtr GetForegroundWindow();
@@ -74,22 +76,24 @@ namespace TopWinPrio
         /// <summary>
         /// The GetWindowText.
         /// </summary>
-        /// <param name="hWnd">The hWnd<see cref="IntPtr"/>.</param>
-        /// <param name="text">The text<see cref="StringBuilder"/>.</param>
-        /// <param name="count">The count<see cref="int"/>.</param>
+        /// <param name="hWnd">The hWnd <see cref="IntPtr"/>.</param>
+        /// <param name="text">The text <see cref="StringBuilder"/>.</param>
+        /// <param name="count">The count <see cref="int"/>.</param>
         /// <returns>The <see cref="int"/>.</returns>
         [PreserveSig]
         [DllImport("user32.dll", CallingConvention = CallingConvention.Winapi, CharSet = CharSet.Unicode)]
+        [System.Security.SecurityCritical]
         private static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
 
         /// <summary>
         /// The GetWindowThreadProcessId.
         /// </summary>
-        /// <param name="hWnd">The hWnd<see cref="IntPtr"/>.</param>
-        /// <param name="lpdwProcessId">The lpdwProcessId<see cref="uint"/>.</param>
+        /// <param name="hWnd">The hWnd <see cref="IntPtr"/>.</param>
+        /// <param name="lpdwProcessId">The lpdwProcessId <see cref="uint"/>.</param>
         /// <returns>The <see cref="int"/>.</returns>
         [PreserveSig]
         [DllImport("user32.dll", CallingConvention = CallingConvention.Winapi, CharSet = CharSet.Unicode)]
+        [System.Security.SecurityCritical]
         private static extern int GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
     }
 }

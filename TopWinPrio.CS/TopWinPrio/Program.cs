@@ -7,6 +7,8 @@
 // For more information visit http://MarcusMedina.Pro
 //----------------------------------------------------------------------------------------------------------------
 
+#pragma warning disable ET002
+
 namespace TopWinPrio
 {
     using System;
@@ -14,7 +16,7 @@ namespace TopWinPrio
     using System.Windows.Forms;
 
     /// <summary>
-    /// Defines the <see cref="Program" />.
+    /// Defines the <see cref="Program"/>.
     /// </summary>
     internal sealed class Program
     {
@@ -33,8 +35,10 @@ namespace TopWinPrio
                 {
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
-                    var frmPrio = new MainForm { Visible = false };
-                    Application.Run(frmPrio);
+                    using (var frmPrio = new MainForm { Visible = false })
+                    {
+                        Application.Run(frmPrio);
+                    }
                 }
             }
         }

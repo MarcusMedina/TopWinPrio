@@ -1,6 +1,6 @@
 //----------------------------------------------------------------------------------------------------------------
 // File header copyright text should match
-// <copyright file="Util.cs" company="MarcusMedinapro">
+// <copyright file="RegistryTools.cs" company="MarcusMedinapro">
 // Copyright (c) MarcusMedinaPro. All rights reserved.
 // </copyright>
 //----------------------------------------------------------------------------------------------------------------
@@ -9,14 +9,15 @@
 //----------------------------------------------------------------------------------------------------------------
 
 #pragma warning disable ET002
+
 namespace TopWinPrio
 {
     using Microsoft.Win32;
 
     /// <summary>
-    /// Defines the <see cref="Util" />.
+    /// Defines the <see cref="RegistryTools"/>.
     /// </summary>
-    public static class Util
+    public static class RegistryTools
     {
         /// <summary>
         /// Defines the HKCVRUNLOCATION.
@@ -26,8 +27,8 @@ namespace TopWinPrio
         /// <summary>
         /// The IsAutoStartEnabled.
         /// </summary>
-        /// <param name="keyName">The keyName<see cref="string"/>.</param>
-        /// <param name="assemblyLocation">The assemblyLocation<see cref="string"/>.</param>
+        /// <param name="keyName">The keyName <see cref="string"/>.</param>
+        /// <param name="assemblyLocation">The assemblyLocation <see cref="string"/>.</param>
         /// <returns>The <see cref="bool"/>.</returns>
         public static bool IsAutoStartEnabled(string keyName, string assemblyLocation)
         {
@@ -44,8 +45,8 @@ namespace TopWinPrio
         /// <summary>
         /// The SetAutoStart.
         /// </summary>
-        /// <param name="keyName">The keyName<see cref="string"/>.</param>
-        /// <param name="assemblyLocation">The assemblyLocation<see cref="string"/>.</param>
+        /// <param name="keyName">The keyName <see cref="string"/>.</param>
+        /// <param name="assemblyLocation">The assemblyLocation <see cref="string"/>.</param>
         public static void SetAutoStart(string keyName, string assemblyLocation)
         {
             var registryKey = Registry.CurrentUser.CreateSubKey(HKCVRUNLOCATION);
@@ -55,8 +56,8 @@ namespace TopWinPrio
         /// <summary>
         /// The UnSetAutoStart.
         /// </summary>
-        /// <param name="keyName">The keyName<see cref="string"/>.</param>
-        public static void UnSetAutoStart(string keyName)
+        /// <param name="keyName">The keyName <see cref="string"/>.</param>
+        public static void RemoveAutoStart(string keyName)
         {
             var registryKey = Registry.CurrentUser.CreateSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Run");
             registryKey.DeleteValue(keyName);
