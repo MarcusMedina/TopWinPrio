@@ -46,6 +46,7 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>TopWinPrio.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -66,6 +67,7 @@
     <WarningLevel>4</WarningLevel>
     <DebugType>none</DebugType>
     <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>TopWinPrio.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib">
@@ -83,20 +85,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Root\Util.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="TopWinPrio.Properties\Resources.cs" />
     <Compile Include="TopWinPrio.Properties\Settings.cs" />
-    <Compile Include="TopWinPrio\frmPrio.cs">
+    <Compile Include="TopWinPrio\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TopWinPrio\Program.cs" />
-    <Compile Include="TopWinPrio\WinAPI.cs" />
+    <Compile Include="TopWinPrio\NativeMethods.cs" />
+    <Compile Include="Util\Util.cs" />
     <Content Include="App.ico" />
-    <EmbeddedResource Include="TopWinPrio.Properties\Resources.resx" />
-    <EmbeddedResource Include="TopWinPrio\frmPrio.resx" />
+    <EmbeddedResource Include="TopWinPrio.Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopWinPrio\frmPrio.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="packages.config" />
+    <AdditionalFiles Include="stylecop.json" />
+    <None Include="TopWinPrio.header" />
+    <None Include="TopWinPrio.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.CodeFixes.dll" />
+    <Analyzer Include="..\packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

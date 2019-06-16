@@ -1,19 +1,62 @@
-using System.CodeDom.Compiler;
-using System.ComponentModel;
-using System.Configuration;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
+//----------------------------------------------------------------------------------------------------------------
+// <copyright file="Settings.cs" company="MarcusMedinapro">
+// Copyright (c) MarcusMedinaPro. All rights reserved.
+// </copyright>
+//----------------------------------------------------------------------------------------------------------------
+// This file is subject to the terms and conditions defined in file 'license.txt', which is part of this project.
+// For more information visit http://MarcusMedina.Pro
+//----------------------------------------------------------------------------------------------------------------
 
+#pragma warning disable ET002
 namespace TopWinPrio.Properties
 {
+    using System.CodeDom.Compiler;
+    using System.ComponentModel;
+    using System.Configuration;
+    using System.Diagnostics;
+    using System.Runtime.CompilerServices;
 
+    /// <summary>
+    /// Defines the <see cref="Settings" />
+    /// </summary>
     [GeneratedCode("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "9.0.0.0")]
     [CompilerGenerated]
     internal sealed class Settings : ApplicationSettingsBase
     {
-
+        /// <summary>
+        /// Defines the defaultInstance
+        /// </summary>
         private static Settings defaultInstance;
 
+        /// <summary>
+        /// Initializes static members of the <see cref="Settings"/> class.
+        /// </summary>
+        static Settings()
+        {
+            Settings.defaultInstance = (Settings)SettingsBase.Synchronized(new Settings());
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Settings"/> class.
+        /// </summary>
+        public Settings()
+        {
+        }
+
+        /// <summary>
+        /// Gets the Default
+        /// </summary>
+        public static Settings Default
+        {
+            get
+            {
+                return Settings.defaultInstance;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the ActiveWinPrio
+        /// </summary>
         [UserScopedSetting]
         [DefaultSettingValue("0")]
         [DebuggerNonUserCode]
@@ -29,6 +72,9 @@ namespace TopWinPrio.Properties
             }
         }
 
+        /// <summary>
+        /// Gets or sets the ApplicationPrio
+        /// </summary>
         [DebuggerNonUserCode]
         [UserScopedSetting]
         [DefaultSettingValue("1")]
@@ -44,6 +90,9 @@ namespace TopWinPrio.Properties
             }
         }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether BalloonHidden
+        /// </summary>
         [DefaultSettingValue("True")]
         [UserScopedSetting]
         [DebuggerNonUserCode]
@@ -59,6 +108,9 @@ namespace TopWinPrio.Properties
             }
         }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether BalloonStart
+        /// </summary>
         [UserScopedSetting]
         [DebuggerNonUserCode]
         [DefaultSettingValue("True")]
@@ -74,6 +126,9 @@ namespace TopWinPrio.Properties
             }
         }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether BoostExplorer
+        /// </summary>
         [UserScopedSetting]
         [DefaultSettingValue("False")]
         [DebuggerNonUserCode]
@@ -89,6 +144,9 @@ namespace TopWinPrio.Properties
             }
         }
 
+        /// <summary>
+        /// Gets or sets the InactiveWinPrio
+        /// </summary>
         [DefaultSettingValue("0")]
         [UserScopedSetting]
         [DebuggerNonUserCode]
@@ -104,6 +162,9 @@ namespace TopWinPrio.Properties
             }
         }
 
+        /// <summary>
+        /// Gets or sets the RefreshTime
+        /// </summary>
         [DefaultSettingValue("1")]
         [UserScopedSetting]
         [DebuggerNonUserCode]
@@ -119,6 +180,9 @@ namespace TopWinPrio.Properties
             }
         }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether StartHidden
+        /// </summary>
         [DefaultSettingValue("True")]
         [DebuggerNonUserCode]
         [UserScopedSetting]
@@ -134,32 +198,22 @@ namespace TopWinPrio.Properties
             }
         }
 
-        public static Settings Default
-        {
-            get
-            {
-                return Settings.defaultInstance;
-            }
-        }
-
-        public Settings()
-        {
-        }
-
-        static Settings()
-        {
-            Settings.defaultInstance = (Settings)SettingsBase.Synchronized(new Settings());
-        }
-
+        /// <summary>
+        /// The SettingChangingEventHandler
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="SettingChangingEventArgs"/></param>
         private void SettingChangingEventHandler(object sender, SettingChangingEventArgs e)
         {
         }
 
+        /// <summary>
+        /// The SettingsSavingEventHandler
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="CancelEventArgs"/></param>
         private void SettingsSavingEventHandler(object sender, CancelEventArgs e)
         {
         }
-
-    } // class Settings
-
+    }
 }
-
