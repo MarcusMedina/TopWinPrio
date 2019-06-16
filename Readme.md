@@ -11,6 +11,9 @@ StyleCop was not happy with me when I opened the code 2019.
 
 My plan is to make a more Windows 10 adapted version, but for now I'll just publish this version.
 
+## Latest changes. 
+June 16, 2019 - Adapted the code to be more compatible with Stylecop. Besides that, no changes in the functionality was added.
+
 ## Download
 You can download the [original Zip](http://marcusmedina.pro/download/220/ "original Zip") with manual and installer from my Website.
 
