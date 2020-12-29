@@ -15,7 +15,7 @@ My plan is to make a more Windows 10 adapted version, but for now I'll just publ
 June 16, 2019 - Adapted the code to be more compatible with Stylecop. Besides that, no changes in the functionality was added.
 
 ## Download
-You can download the [original Zip](http://marcusmedina.pro/download/220/ "original Zip") with manual and installer from my Website.
+You can download the [original Zip](http://marcusmedina.pro/download/topwinprio/ "original Zip") with manual and installer from my Website.
 
 ## History
 Shortly after realeasing the app my harddrive crashed and I lost all my code. Yes I know, I should have stored it in the cloud, but I didn't.
